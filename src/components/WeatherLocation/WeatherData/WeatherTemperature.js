@@ -7,7 +7,9 @@ import {
     SUN,
     RAIN,
     SNOW,
-    WINDY } from './../../../constants/Weathers';
+    WINDY,
+    THUNDER,
+    DRIZZLE } from './../../../constants/Weathers';
 
 const stateToIconName =  weatherState =>  {
     switch (weatherState) {
@@ -23,13 +25,17 @@ const stateToIconName =  weatherState =>  {
             return "snow";
         case WINDY:
             return "windy";
+        case THUNDER:
+            return "day-thunderstorm";
+        case DRIZZLE:
+            return "day-showers";
         default:
             return "day-sunny";
     }
 };
 
 const getWeatherIcon = weatherState => {
-    return(<WeatherIcons className="wicon" name={stateToIconName(weatherState)}size="4x" />);
+    return(<WeatherIcons className="wicon" name={stateToIconName(weatherState)}size="3x" />);
 };
 
 const WeatherTemperature = ({temperature, weatherState}) => (

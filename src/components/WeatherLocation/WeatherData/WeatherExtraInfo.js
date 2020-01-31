@@ -10,7 +10,7 @@ const WeatherExtraInfo = ({humidity, wind}) => (
 
 WeatherExtraInfo.propTypes = {
     humidity : PropTypes.number.isRequired,
-    wind : PropTypes.number.isRequired,
+    wind : PropTypes.string.isRequired,
 }
 
 export default WeatherExtraInfo;
